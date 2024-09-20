@@ -24,16 +24,22 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        isAimVlid();
+    }
+    
+    private void isAimVlid()
+    {
         if(input.aim)
         {
             aimCam.gameObject.SetActive(true);
-            crosshair.gameObject.SetActive(true);
+            crosshair.SetActive(true);
         }
 
         else
         {
             aimCam.gameObject.SetActive(false);
-            crosshair.gameObject.SetActive(false);
+            crosshair.SetActive(false);
         }
     }
 }
+
